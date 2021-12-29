@@ -34,7 +34,9 @@ app.UseRouting();
 // app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
+#pragma warning disable IDE0053 // Use expression body for lambda expressions
     endpoints.MapGet("/hello/1", context =>
+#pragma warning restore IDE0053 // Use expression body for lambda expressions
     {
         return context.Response.WriteAsync("Hello Delegate");
     });
